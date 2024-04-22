@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav">
+        <h1>Dustbin Management</h1>
+           <a onclick="display(1)" style="grid-column:4/5 ;" onmouseover="hov(0)" onmouseleave="nhov(0)"> Route <hr></a>
+           <a  onmouseover="hov(1)" onmouseleave="nhov(1)" onclick="display(2)">State <hr></a>
+           <!-- <a onclick="display(3)" onmouseover="hov(2)" onmouseleave="nhov(2)" >Profile <hr></a> -->
+      </div>
+      <div id="map1">
+        <div id="map"></div>
+        <div id="minfo">
+          <h3>Choose Dustbis to find Route</h3>
+            <span><input type="checkbox" id="dustbin1" name="dustbin1" value="13.184986,74.947867">
+            <label for="dustbin1">Dustbin 1</label></span>
+            <span><input type="checkbox" id="dustbin2" name="dustbin2" value="13.185664,74.938824">
+            <label for="dustbin2">Dustbin 2</label></span>
+            <span><input type="checkbox" id="dustbin3" name="dustbin3" value="13.193798,74.928438">
+            <label for="dustbin3">Dustbin 3</label></span>
+            <span><input type="checkbox" id="dustbin4" name="dustbin4" value="13.176169,74.926974">
+            <label for="dustbin4">Dustbin 4</label></span>
+            <button onclick="findRoute()">Submit</button>
+        </div>
+      </div>
+      <div id="info">
+        <div class="detcard">Dustbin 1 <br>
+          <span id="value1"></span><br><span id="value2"></span>
+        </div>
+        <div class="detcard">Dustbin 2</div>
+        <div class="detcard">Dustbin 3</div>
+        <div class="detcard">Dustbin 4</div>
+      </div>
+      <div id="profile">
+        profile
+      </div>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+   <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+      <script src="index.js"></script>
+     
+</body>
+</html>
